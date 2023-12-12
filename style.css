@@ -1,0 +1,99 @@
+/* HOME VIDEO */
+.homeVideo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  padding: 0;
+  background-position: center center;
+
+  overflow: hidden;
+}
+
+.homeVideo:before {
+  content: " ";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.homeVideo > video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.homeVideo .containerVideo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 99;
+}
+
+.homeVideo .containerVideo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 99;
+}
+
+.modalVideo .btn-close {
+  color: #fff;
+  background: none !important;
+  font-size: 2rem;
+  position: absolute;
+  top: -18px;
+  right: -41px;
+  z-index: 999;
+  opacity: 1;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 991px) {
+  .homeVideo {
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .homeVideo {
+    height: 45vh;
+  }
+
+  .homeVideo video {
+    min-width: 100%;
+    min-height: 0;
+    width: 130%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .homeVideo {
+    height: 38vh;
+  }
+
+  .homeVideo video {
+    min-width: 100%;
+    min-height: 0;
+    /*width: 125%;*/
+    width: 146%;
+    height: 38vh;
+  }
+}

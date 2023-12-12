@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Video Home</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- VIDEO CSS -->
+    <link rel="stylesheet" href="./assets/video-js/video-js.min.css">
+    <link rel="stylesheet" href="_T_videojs.css">
+</head>
+
+<body>
+    <header class="bg-light  text-center py-2"><img src="./assets/logo.webp" class="w-10" style="width:100px"></header>
+
+
+    <section class="homeVideo">
+        <!-- VIDEO -->
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="./assets/video/video01.mp4" type="video/mp4">
+            <source src="./assets/video/video01.webm" type="video/webm">
+        </video>
+
+        <!-- TEXT -->
+        <div class="container containerVideo ">
+            <div class="w-100 text-center">
+                <h1 class="text-white text-uppercase">Video</h1>
+                <a class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#myModalVideoPageTop">
+                    Spustit video
+                </a>
+            </div>
+        </div>
+
+        <!-- MODAL -->
+        <div class="modal fade modalVideo modalMove " id="myModalVideoPageTop" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl Xmodal-fullscreen position-relative">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít">×</button>
+                    <div class="modal-body p-0">
+                        <div class="videoWrapper">
+                            <!-- data-setup='{ldelim}"controls": true, "fluid": true, "preload": "metadata"{rdelim}' -->
+                            <video class="video-js vjs-big-play-centered" width="640" height="264"
+                                data-setup='{"controls": true, "fluid": true, "preload": "metadata"}'>
+                                <source src="./assets/video/video01.mp4" type="video/mp4">
+                                <source src="./assets/video/video01.webm" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- JS -->
+    <script src="./assets/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/bootstrap5/js/bootstrap.min.js"></script>
+
+    <!-- VIDEO JS -->
+    <script src="./assets/video-js/video.min.js"></script>
+    <script src="video_play.js"></script>
+
+</body>
+
+</html>
